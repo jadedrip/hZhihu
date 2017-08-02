@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "converted_from_user_script": true,
+  "name": "hZhihu",
+  "version": "0.1",
+  "description": "",
+  "permissions": [
+    "http://*.zhihu.com/",
+    "https://*.zhihu.com/"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "exclude_globs": [],
+      "include_globs": [ "*" ],
+      "matches": [ "https://www.zhihu.com/question/*" ],
+      "js": [ "jquery-3.2.1.min.js", "hzhihu.js" ]
+    }
+  ],
+  "web_accessible_resources": [ "/*.png", "/*.css", "*.js" ]
+}
